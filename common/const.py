@@ -1,0 +1,21 @@
+# users type
+ROOT = 1
+COR_ADMIN = 2
+COR_GENERAL = 3
+
+USER_TYPES = (
+    (ROOT, ROOT),
+    (COR_ADMIN, COR_ADMIN),
+    (COR_GENERAL, COR_GENERAL)
+)
+
+# Company status
+PENDING = 1
+IN_WORK = 2
+STOP = 3
+
+COMPANY_STATUS = (
+    (PENDING, PENDING),
+    (IN_WORK, IN_WORK),
+    (STOP, STOP)
+)
