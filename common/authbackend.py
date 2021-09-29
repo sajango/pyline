@@ -12,8 +12,7 @@ class AuthRootBackend(ModelBackend):
             return None
         if user.check_password(password) and self.user_can_authenticate(user):
             return user
-        else:
-            return None
+        return None
 
     def get_user(self, user_id):
         try:
