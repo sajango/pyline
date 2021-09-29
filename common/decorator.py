@@ -14,9 +14,8 @@ def admin_login_required(function):
             logger.info(request.user.id)
             if request.user.is_admin or request.user.is_superuser:
                 return function(request, *args, **kwargs)
-            else:
-                logger.info('{0} is not admin'.format(request.user.id))
-                return HttpResponseRedirect(admin_login)
+            logger.info('{0} is not admin'.format(request.user.id))
+            return HttpResponseRedirect(admin_login)
         else:
             logger.info("authenticate failed")
             return HttpResponseRedirect(admin_login)
